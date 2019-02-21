@@ -1,0 +1,72 @@
+在移动app的项目上右击/发行/云打包-打包原生安装包
+
+如果要进行配置，要更改manifest.json
+
+git
+
+ 分布式的版本管理工具
+
+ git安装后，右键菜单里会多出者两项
+  git gui here
+  git base here
+
+进入 git base here 就是git 命令行
+
+可以执行git 命令和一些linux命令 也自带了vim 命令行的编辑器
+
+注册一个github账号
+
+
+配置用户名和邮箱
+
+git config --global user.name "github用户名"
+git config --global user.email "github的邮箱"
+
+git config --global user.name  查看用户名
+git config --global user.email 查看邮箱
+
+
+建立版本管理仓库 
+
+在进行代码版本管理的目录下，输入 git init 这个命令就可以了（会产生一个.git的隐藏文件夹）
+
+工作区  暂存区   本地的代码仓库
+
+目前刚建好仓库，所有文件都在工作区
+
+查看状态的命令 git status
+
+把工作区的文件加入到暂存区
+
+git add 文件名
+
+git add .  把工作区里所有文件移动到暂存区（.gitignore文件忽略的文件）
+
+git commit -m "注释"  提交到本地版本仓库
+
+
+git log 查看日志  git log --pretty=oneline
+
+git reflog 查看所有的日志
+
+在版本之间切换  git reset --hard 版本的id号码
+
+
+远程操作
+
+   ssh-keygen -t rsa -C 邮箱
+
+    把生产的公钥传到github账户里（登录后，点github头像/选setting/SSH和GPGkeys 粘贴）   
+
+建立远程连接
+
+   git remote 
+
+
+  git clone 远程仓库的地址   把远程仓库克隆到本地  而且这个目录已经有本地仓库和远程连接了（默认的远程连接叫origin）
+
+  上传到远程仓库
+   git push origin master(第一次)
+   git push
+
+ 
